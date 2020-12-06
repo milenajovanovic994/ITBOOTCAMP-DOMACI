@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav id="fix">
+                <ul>
+                    <li><p id="mj">Milena Jovanović</p></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#work">My work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <section id="about">
+                <div class="wrapper" id="lefty">
+                    <h1 class="hc">Hello, my name is Milena!</h1>
+                    <p class="par">I would like to tell you a little secret: <span>I have never learned how to ride a bike!</span> Funny, right? Besides the lack of knowledge in that area, I am a girl who likes to learn new things.</p>
+                    <p class="par">Recently, I have started building a career in Web Developing! I have always wanted to learn programming and now I am doing just that! I am also finishing my studies in Molecular Biology at the University of Belgrade. I love running, swimming and doing sports in general, and I find my inspiration while doing that. I am very sociable and I like working with people, but I also know how to handle working on my own very well.</p>
+                    <p class="par">When I am in a group project, I know how to lead and I am very glad to do so, but at the same time I am willing to listen to all of my coleagues' oppinions and to consider them as valued as my own.</p>
+                    <p class="par">Volunteering is my passion, and I have been a part of many projects from a lot of different areas.</p>
+                    <p class="par">People would describe me as a very ambitious and hard-working person, but also as someone who enjoys helping and sharing her knowledge whenever she can.</p>
+                </div>
+                <img id="me" src="images/image_me.jpg" alt="Photo of me!" title="This is a photo of me!">
+                <div class="wrapper">
+                    <h2>My skills:</h2>
+                    <ul>
+                        <li>Languages:
+                            <ol>
+                                <li>English language (C1)</li>
+                                <li>French language (B1)</li>
+                            </ol>
+                        </li>   
+                        <li>HTML5, CSS3</li>
+                        <li>Git, GitHub</li>
+                        <li>JavaScript, React</li>
+                        <li>Microsoft Office:
+                            <ol>
+                                <li>Microsoft Word</li>
+                                <li>Microsoft Excell</li>
+                                <li>Microsoft PowerPoint</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="work">
+                <div class="wrapper">
+                    <h2>This is my work!</h2>
+                    <a href="#" target="_blank"><img src="images/projects.jpg" alt="My portfolio" title="This is my portfolio!"></a>
+                    <a href="#" target="_blank"><img src="images/projects.jpg" alt="My portfolio" title="This is my portfolio!"></a>
+                    <a href="#" target="_blank"><img src="images/projects.jpg" alt="My portfolio" title="This is my portfolio!"></a>
+                </div>
+            </section>
+            <section id="review" class="wrapper">
+                <p>If you like my work, or don't, feel free to fill in the form below, tell me your sincere opinion considering my work, it will help me to improve it and I will appreciate it a lot!</p>
+                <form>
+                    <div>
+                        <label for="fname">Your name:</label>
+                        <input type="text" id="fname" name="name" placeholder="Type your full name..."><br>
+                    </div>
+                    <div>
+                        <label for="gender">Gender:</label><br>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </div>
+                    <div>
+                        <p>Would you like to receive notifications about my further work?</p>
+                        <input type="checkbox" id="notif" name="notif" value="Yes">
+                        <label for="notif">Yes</label><br>
+                        <label for="email">Your email:</label>
+                        <input type="email" id="email" name="email" placeholder="Type your email..."><br>
+                    </div>
+                    <div>
+                        <label for="opinion">Give me your opinion!</label><br>
+                        <textarea id="opinion" name="opinion" rows="10" cols="50">
+                        </textarea><br>
+                        <input id="submit" type="submit" value="Submit!">
+                    </div>
+                </form>
+            </section>
+            <section id="contact">
+                <div>
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><strong>E-mail:</strong>milenche.jovanovic@gmail.com</li>
+                        <li><strong>Adress:</strong>Bulevar Dr Zorana Djindjica<br>18000, Niš<br>Serbia</li>
+                        <li><strong>Telephone number:</strong>+38164 4333016</li>
+                    </ul>
+                </div>
+            </section>
+            <button type="button"><a href="#main">Back<br>to top</a></button>
+        </main>
+        <footer id="footer">
+            <ul>
+                <li><a href="https://www.facebook.com/milena.jovanovic2" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/pojela_sam_bambijaaa/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank">Linkedin</a></li>
+                <li><a href="https://twitter.com/?lang=en" target="_blank">Twitter</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
