@@ -2,7 +2,7 @@
 // (параметри функције су полупречник у цм, и цена пице)
 
 function cenaPoCmKv(r, cenaPice) {
-    if (r >= 0 && cenaPice >= 0)
+    if (r > 0 && cenaPice > 0)
         return cenaPice / (r ** 2 * Math.PI)
 }
 
