@@ -5,6 +5,7 @@ const app = document.querySelector('#app')
 const divShow = document.querySelector('#show')
 const select = document.querySelector('#select')
 const btnSubmit = document.querySelector('#btn')
+const overlay = document.querySelector('.overlay')
 
 
 const showInfo = (link) => {
@@ -17,16 +18,30 @@ const showInfo = (link) => {
     info.target = '_blank'
     info.classList.add('aInfo')
 
+    overlay.classList.remove('hidden')
+
     const btnClose = document.createElement('button')
     btnClose.classList.add('btn-close')
     btnClose.textContent = 'CLOSE'
     btnClose.addEventListener('click', () => {
-        divInfo.classList.remove('info')
         divInfo.classList.add('hidden')
+        overlay.classList.add('hidden')
+    })
+
+    overlay.addEventListener('click', () => {
+        divInfo.classList.add('hidden')
+        overlay.classList.add('hidden')
+    })
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !divInfo.classList.contains('hidden')) {
+            divInfo.classList.add('hidden')
+            overlay.classList.add('hidden')
+        }
     })
 
     divInfo.append(info, btnClose)
-    divShow.appendChild(divInfo)
+    app.appendChild(divInfo)
 }
 
 const addToDOM = (image, namE, link) => {
@@ -53,14 +68,6 @@ const addToDOM = (image, namE, link) => {
     divShow.appendChild(divItem)
 }
 
-// const renderAll = (arr, image, namE) => {
-//     divShow.innerHTML = ''
-//     arr.forEach(el => {
-//         addToDOM(el.image, el.namE)
-//     })
-// }
-
-
 btnSubmit.addEventListener('click', () => {
 
     if (select.value === 'ships') {
@@ -82,9 +89,3 @@ btnSubmit.addEventListener('click', () => {
             })
     }
 })
-
-axios.get('https://api.spacexdata.com/v3/launches')
-    .then(res => console.log(res))
-
-axios.get('https://api.spacexdata.com/v3/ships')
-    .then(res => console.log(res))
