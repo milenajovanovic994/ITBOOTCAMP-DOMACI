@@ -40,6 +40,7 @@ class Kupac {
     }
 }
 
+
 class Proizvod {
     naziv
     cena
@@ -158,17 +159,17 @@ const addToDOM = (item) => {
             divProizvod1Copy.append(pNazivCopy, pCenaCopy, pKolicina)
             korpaKupca.append(divProizvod1Copy, btnDel)
 
-            
+
 
             pDostupno.textContent = `Dostupno: ${trenutno - Number(input.value)} komada`
 
             trenutno -= Number(input.value)
 
-            
+
         } else {
             window.alert('Nema dovoljno na stanju!')
         }
-       
+
         input.value = ''
     })
 
