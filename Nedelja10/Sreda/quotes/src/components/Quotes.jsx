@@ -20,7 +20,7 @@ const Quotes = ({ user, quotes, setQuotes }) => {
         :
         (
             <>
-                <h3>Morate biti ulogovani da biste videli ovu stranicu!</h3>
+                <h3>You need to be logged in to access this page!</h3>
                 <Link to="/login">Login</Link>
             </>
         )
