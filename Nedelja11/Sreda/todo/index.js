@@ -67,11 +67,12 @@ app.post('/todos', (req,res) => {
 
 app.patch('/todos/:id', (req,res) => {
     const id = req.params.id
-    const todo = req.body
+    const newTodo = req.body
+    const index = todos.findIndex(todo => todo.id == id)
 
-    todos = todos.splice(id, 1, {...todos[id], ...todo})
+    todos = todos.splice(index, 1, {...todos[index], ...todo})
 
-    res.json(todos)
+    res.json(newTodo)
 })
 
 const PORT = 3005
